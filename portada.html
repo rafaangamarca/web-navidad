@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bienvenido</title>
+
+  <style>
+    body{
+      margin:0;
+      background-image:url("images/fondo.jpg");
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+      color:beige;
+      font-family:Georgia;
+    }
+    img{
+      width:720px;
+      max-width:90%;
+    }
+  </style>
+
+  <script>
+    function pistaCodigo(){
+      alert(
+        "MISIÓN NAVIDEÑA:\n" +
+        "El código secreto está escondido en la propia portada.\n\n" +
+        "Pista 1: Mira el texto que aparece debajo del regalo.\n" +
+        "Pista 2: El código es una palabra relacionada con estas fiestas.\n" +
+        "Pista 3: Todo en minúsculas."
+      );
+    }
+
+    function pedirContrasena(){
+      var pass = prompt("INTRODUCE EL CÓDIGO SECRETO PARA ENTRAR");
+      if (pass === null) return false;
+
+      if (pass === "navidad") {
+        window.location.href = "index.html";
+        return false;
+      } else {
+        alert("Código incorrecto. Usa el botón de PISTA si lo necesitas.");
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body link="beige" vlink="beige" alink="white">
+
+  <!-- Idiomas (arriba a la derecha, fuera del header) -->
+  <div style="width:100%; text-align:right; padding:12px; box-sizing:border-box;">
+    <a href="portada.html"><b>ES</b></a> &nbsp;
+    <a href="idiomas/en/portada.html"><b>EN</b></a> &nbsp;
+    <a href="idiomas/uk/portada.html"><b>UK</b></a>
+  </div>
+
+  <center>
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" valign="middle">
+
+          <a href="index.html" onclick="return pedirContrasena();">
+            <img src="images/portada.png" alt="Entrar">
+          </a>
+
+          <br><br>
+
+          <font size="5"><b>Pulsa el regalo para entrar</b></font>
+          <br>
+          <font size="4">
+            Pista: el código es la palabra que define estas fiestas (en minúsculas).
+          </font>
+
+          <br><br>
+
+          <button onclick="pistaCodigo()">
+            Necesito una pista
+          </button>
+
+          <br><br>
+
+          <font size="3">
+            Reto: Encuentra el código usando la pista y entra para descubrir la web de Navidad 2025.
+          </font>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+
+</body>
+</html>

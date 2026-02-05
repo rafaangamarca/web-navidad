@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ласкаво просимо</title>
+
+  <style>
+    body{
+      margin:0;
+      background-image:url("images/fondo.jpg");
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+      color:beige;
+      font-family:Georgia;
+    }
+    img{
+      width:720px;
+      max-width:90%;
+    }
+  </style>
+
+  <script>
+    function pistaCodigo(){
+      alert(
+        "РІЗДВЯНА МІСІЯ:\n" +
+        "Секретний код схований прямо на цій обкладинці.\n\n" +
+        "Підказка 1: Подивись на текст, який знаходиться під подарунком.\n" +
+        "Підказка 2: Код — це слово, пов’язане з цими святами.\n" +
+        "Підказка 3: Усе маленькими літерами."
+      );
+    }
+
+    function pedirContrasena(){
+      var pass = prompt("ВВЕДИ СЕКРЕТНИЙ КОД, ЩОБ ПРОДОВЖИТИ");
+      if (pass === null) return false;
+
+      if (pass === "navidad") {
+        window.location.href = "index.html";
+        return false;
+      } else {
+        alert("Неправильний код. Якщо потрібно — натисни кнопку ПІДКАЗКА.");
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body link="beige" vlink="beige" alink="white">
+
+  <!-- Мови (вгорі праворуч) -->
+  <div style="width:100%; text-align:right; padding:12px; box-sizing:border-box;">
+    <a href="../../portada.html"><b>ES</b></a> &nbsp;
+    <a href="../en/portada.html"><b>EN</b></a> &nbsp;
+    <a href="portada.html"><b>UK</b></a>
+  </div>
+
+  <center>
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" valign="middle">
+
+          <a href="index.html" onclick="return pedirContrasena();">
+            <img src="images/portada.png" alt="Увійти">
+          </a>
+
+          <br><br>
+
+          <font size="5"><b>Натисни на подарунок, щоб увійти</b></font>
+          <br>
+          <font size="4">
+            Підказка: код — це слово, яке описує ці свята (маленькими літерами).
+          </font>
+
+          <br><br>
+
+          <button onclick="pistaCodigo()">
+            Мені потрібна підказка
+          </button>
+
+          <br><br>
+
+          <font size="3">
+            Завдання: знайди код за підказкою та увійди, щоб відкрити сайт Різдво 2025.
+          </font>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+
+</body>
+</html>
